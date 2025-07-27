@@ -1,0 +1,53 @@
+{
+  "max_open_trades": 5,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "fiat_display_currency": "USD",
+  "exchange": {
+    "name": "binance",
+    "sandbox": true,
+    "key": "YOUR_KEY",
+    "secret": "YOUR_SECRET"
+  },
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "pairlist": {
+    "method": "Static",
+    "number_assets": 20,
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT"
+    ]
+  },
+  "timeframe": "1h",
+  "entry_pricing": {
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false
+  },
+  "telegram": {
+    "enabled": true,
+    "token": "${TELEGRAM_TOKEN}",
+    "chat_id": "${TELEGRAM_CHAT_ID}",
+    "send_trades": true
+  },
+  "api_server": {
+    "enabled": true,
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 8080,
+    "username": "${FT_API_USERNAME}",
+    "password": "${FT_API_PASSWORD}",
+    "ssl_enabled": false
+  }
+}
