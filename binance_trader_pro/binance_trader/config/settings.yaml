@@ -1,0 +1,33 @@
+# Global Settings
+testnet: false
+base_url_mainnet: "https://fapi.binance.com"
+base_url_testnet: "https://testnet.binancefuture.com"
+
+# Market stream WS (unused by default runner; provided for extension)
+wss_market_mainnet: "wss://fstream.binance.com"
+wss_market_testnet: "wss://stream.binancefuture.com"
+
+# Order WebSocket API (optional advanced use)
+wss_order_mainnet: "wss://ws-fapi.binance.com/ws-fapi/v1"
+wss_order_testnet: "wss://testnet.binancefuture.com/ws-fapi/v1"
+
+symbol: "BTCUSDT"
+interval: "1m"
+quote_asset: "USDT"
+
+# Fees & Slippage
+taker_fee_rate: 0.0004   # 4 bps (예시)
+maker_fee_rate: 0.0002
+slippage_bps: 1.0        # 1 bp = 0.01% (백테스트 가정)
+
+# Risk
+max_leverage: 20
+risk_per_trade: 0.01     # 1% of equity
+max_position_notional_pct: 0.9
+
+# Strategy defaults
+strategy:
+  name: "sma_cross"
+  params:
+    fast: 20
+    slow: 60

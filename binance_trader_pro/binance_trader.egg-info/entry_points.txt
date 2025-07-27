@@ -1,0 +1,2 @@
+[console_scripts]
+binance-trader = binance_trader.cli:main

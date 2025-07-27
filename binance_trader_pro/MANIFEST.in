@@ -1,0 +1,5 @@
+
+include README.md
+include LICENSE
+include binance_trader/config/*.yaml
+include binance_trader/config/.env.example
