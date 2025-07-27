@@ -1,0 +1,7 @@
+FROM freqtradeorg/freqtrade:stable
+WORKDIR /freqtrade
+# 전략/설정 포함 (필요 시 빌드마다 반영)
+COPY user_data ./user_data
+EXPOSE 8080
+# web UI를 기본 실행(원하면 backtesting/trade로 바꿔도 됨)
+CMD ["webserver", "--config", "user_data/config_mainnet_live_small.json"]
